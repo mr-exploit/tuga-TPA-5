@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "projecttodolist",
+    "password": "Kambing1211",
+    "database": "project_todolist",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "projecttodolist",
+    "password": "Kambing1211",
+    "database": "project_todolist",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "projecttodolist",
+    "password": "Kambing1211",
+    "database": "project_todolist",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  }
+}
