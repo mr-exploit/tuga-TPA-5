@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const port = 5000;
+const port = process.env.PORT || 3050;
 
 // untuk login
 app.use(login);
@@ -28,11 +28,7 @@ app.use(getkategoriall, getkategoriid, createkategori, updatekategori, deletekat
 // untuk menggunakan table todo
 app.use(gettodoall, gettodoid, createtodo, deletetodo);
 
-// app.use(router);
 
-
-
-
-app.listen(port, () =>{
+app.listen(port, "0.0.0.0", function () {
     console.log(`Aplikasi anda berjalan di port : ${port}`);
 })

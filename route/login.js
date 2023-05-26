@@ -27,6 +27,15 @@ const login = app.post('/login', async(req, res) => {
         return;
     }
 
+    if (user.password != password) {
+        res.status(401);
+        res.send({
+            error: 'password salah'
+        });
+
+        return;
+    }
+
     const token = jwt.sign({
         sub: user.id,
         iss: 'skilvul',
