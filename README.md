@@ -15,33 +15,75 @@ ada beberapa API yang minta authorization :
 2. getUserid
 3. updateusers
 4. deleteusers
-5. gettodoall
+5. createtodo
+6. updatetodo
+7. deletetodo
+8. createkategori
+9. updatekategori
+10. deletekategori
 
 Request :
 - Header :
-    - "Authorization" : "your secret api key"
+    - "Authorization" : "Bearer <token>"
 
 ## LOGIN
 
 Request :
 
-Method : POST
-Endpoint : https://tugas-tpa-5-production.up.railway.app/login
-Header :
-Content-Type: application/json
-Accept: application/json
+- Method : POST
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/login
+- Header :
+      - Content-Type: application/json
+      - Accept: application/json
 
-Body :
+- Body :
+```json  
 {
-   {
     "email": "admin@gmail.com",
     "password": "Kucing12"
-  }
 }
+```
+
 Response :
+```json  
 {
-    "token": <token>
+    "token": "<token>"
 }
+```
+
+![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/4de22446-ae85-4716-9ad0-d1a689d38a75)
+
+
+## SIGNUP
+
+Request :
+
+- Method : POST
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/signup
+
+- Header :
+      - Content-Type: application/json
+      - Accept: application/json
+
+- Body :
+```json  
+{
+    "username": "string",
+    "email": "string",
+    "password": "string"
+}
+```
+
+Response :
+```json  
+{
+    "username": "string",
+    "email": "string",
+    "password": "string"
+    
+}
+```
+
 ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/4de22446-ae85-4716-9ad0-d1a689d38a75)
 
   
