@@ -77,45 +77,123 @@ Request :
 Response :
 ```json  
 {
-    "username": "string",
-    "email": "string",
-    "password": "string"
-    
+  "status": "SUCCESS",
+    "message": "Create Users",
+    "data": {
+      "id" : "integer",
+      "username": "string",
+      "email": "string",
+      "password": "string"
+    }
 }
 ```
 
-![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/4de22446-ae85-4716-9ad0-d1a689d38a75)
+![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/4a094882-3e1d-4755-9230-51c1c5f48c1e)
 
   
 # Authorization
-# Get Todo
+## Create todo
+    
+Request :
+
+- Method : POST
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/todo
+-Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer <token>
+    
+- gambar masukkan token 
+![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/62e8fc93-ca7d-474e-a95b-e3c3135e61da)
+
+- Body : 
+```json
+     {
+        "judul": "String",
+        "konten": "String",
+        "kategori_id": "integer"
+    }
+```
+![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/ea168f26-8d59-4c63-ba76-3ec19b60b361)
+
+
+- Response : 
+    
+```json
+  {
+    "status": "SUCCESS",
+    "message": "Create Todo",
+    "data": {
+        "id": "string",
+        "judul": "string",
+        "konten": "string",
+        "kategori_id": "integer",
+        "updatedAt": "string",
+        "createdAt": "string"
+    }
+  }
+```
+    
+# Not Authrozation    
+## List Todo
   
 Request :
 
-Method : GET
-Endpoint : https://tugas-tpa-5-production.up.railway.app/todo
-Header :
-Content-Type: application/json
-Accept: application/json
-Authorization : Bearer <token>
-
-Response : 
+- Method : GET
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/todo
+-Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    
+- Response : 
+```json
   {
     "status": "SUCCESS",
     "message": "Get All todo",
     "total": {
-        "total": integer
+        "total": 3
     },
-    "data": [ 
-          {
-              "string" : integer,
-              "string" : "string",
-              "string" : "string",
-              "string" : integer,
-          }
-  ]
+    "data": [
+        {
+            "id": "integer",
+            "judul": "string",
+            "konten": "string",
+            "kategori_id": "integer",
+            "createdAt": "string",
+            "updatedAt": "string",
+            "kategori": {
+                "id": "integer",
+                "nama": "string",
+                "deskripsi": "string",
+                "createdAt": "string",
+                "updatedAt": "string"
+            }
+        },
+        {
+            "id": "integer",
+            "judul": "string",
+            "konten": "string",
+            "kategori_id": "integer",
+            "createdAt": "string",
+            "updatedAt": "string",
+            "kategori": {
+                "id": "integer",
+                "nama": "string",
+                "deskripsi": "string",
+                "createdAt": "string",
+                "updatedAt": "string"
+            }
+        },
+    ]
   }
-   
+  ```
+  - hasil gambar
+    
+  ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/7b84cc07-87f5-4afa-98b8-a677d74c6fe9)
+
+    
+ 
+
   
   ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/c95e1d1a-2ec0-432e-ae0c-32473570df40)
   
