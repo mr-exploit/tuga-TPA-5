@@ -14,7 +14,7 @@ const getusersall = app.get("/users", auth,handleuserall);
 
 const getusersid = app.get("/users/:id", auth, handleuserid);
 
-const createusers = app.post("/singup", handlecreate);
+const createusers = app.post("/signup", handlecreate);
 
 const updateusers = app.put("/users/:id", auth, handleupdate);
 
