@@ -12,15 +12,15 @@ selanjutnya untuk mengetes API silahkan dicoba
 ## Authorization
 ada beberapa API yang minta authorization :
 1. getUserall = https://tugas-tpa-5-production.up.railway.app/users
-2. getUserid = https://tugas-tpa-5-production.up.railway.app/users/:id
-3. updateusers = https://tugas-tpa-5-production.up.railway.app/users/:id
-4. deleteusers = https://tugas-tpa-5-production.up.railway.app/users/:id
+2. getUserid = https://tugas-tpa-5-production.up.railway.app/users/{id_users}
+3. updateusers = https://tugas-tpa-5-production.up.railway.app/users/{id_users}
+4. deleteusers = https://tugas-tpa-5-production.up.railway.app/users/{id_users}
 5. createtodo = https://tugas-tpa-5-production.up.railway.app/todo
-6. updatetodo = https://tugas-tpa-5-production.up.railway.app/todo/:id
-7. deletetodo = https://tugas-tpa-5-production.up.railway.app/todo/:id
+6. updatetodo = https://tugas-tpa-5-production.up.railway.app/todo/{id_todo}
+7. deletetodo = https://tugas-tpa-5-production.up.railway.app/todo/{id_todo}
 8. createkategori = https://tugas-tpa-5-production.up.railway.app/kategori
-9. updatekategori = https://tugas-tpa-5-production.up.railway.app/kategori/:id
-10. deletekategori = https://tugas-tpa-5-production.up.railway.app/kategori/:id
+9. updatekategori = https://tugas-tpa-5-production.up.railway.app/kategori/{id_kategori}
+10. deletekategori = https://tugas-tpa-5-production.up.railway.app/kategori/{id_kategori}
 
 Request :
 - Header :
