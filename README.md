@@ -11,16 +11,16 @@ selanjutnya untuk mengetes API silahkan dicoba
 
 ## Authorization
 ada beberapa API yang minta authorization :
-1. getUserall
-2. getUserid
-3. updateusers
-4. deleteusers
-5. createtodo
-6. updatetodo
-7. deletetodo
-8. createkategori
-9. updatekategori
-10. deletekategori
+1. getUserall = https://tugas-tpa-5-production.up.railway.app/users
+2. getUserid = https://tugas-tpa-5-production.up.railway.app/users/:id
+3. updateusers = https://tugas-tpa-5-production.up.railway.app/users/:id
+4. deleteusers = https://tugas-tpa-5-production.up.railway.app/users/:id
+5. createtodo = https://tugas-tpa-5-production.up.railway.app/todo
+6. updatetodo = https://tugas-tpa-5-production.up.railway.app/todo/:id
+7. deletetodo = https://tugas-tpa-5-production.up.railway.app/todo/:id
+8. createkategori = https://tugas-tpa-5-production.up.railway.app/kategori
+9. updatekategori = https://tugas-tpa-5-production.up.railway.app/kategori/:id
+10. deletekategori = https://tugas-tpa-5-production.up.railway.app/kategori/:id
 
 Request :
 - Header :
@@ -98,7 +98,7 @@ Request :
 
 - Method : POST
 - Endpoint : https://tugas-tpa-5-production.up.railway.app/todo
--Header :
+- Header :
     - Content-Type: application/json
     - Accept: application/json
     - Authorization : Bearer <token>
@@ -133,6 +133,56 @@ Request :
     }
   }
 ```
+    
+## Update todo
+    
+Request :
+
+- Method : PUT
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/todo/{id_todo}
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer <token>
+    
+- Body : 
+```json
+     {
+        "judul": "String",
+        "konten": "String",
+        "kategori_id": "integer"
+    }
+```
+    
+- Response : 
+    
+```json
+  {
+    "status": "SUCCESS",
+    "message": "Berhasil Update Todo",
+  }
+```
+
+## Delete todo
+    
+Request :
+
+- Method : DELETE
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/todo/{id_todo}
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer <token>
+     
+- Response : 
+    
+```json
+  {
+    "status": "SUCCESS",
+    "message": "Delete todo"
+  }
+```
+
     
 # Not Authrozation    
 ## List Todo
@@ -191,10 +241,44 @@ Request :
     
   ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/7b84cc07-87f5-4afa-98b8-a677d74c6fe9)
 
-    
- 
-
+## Get Todo
   
-  ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/c95e1d1a-2ec0-432e-ae0c-32473570df40)
+Request :
+
+- Method : GET
+- Endpoint : https://tugas-tpa-5-production.up.railway.app/todo/{id_todo}
+-Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    
+- Response : 
+```json
+  {
+    "status": "SUCCESS",
+    "message": "Get Detail todo",
+    "data": [
+        {
+            "id": "integer",
+            "judul": "String",
+            "konten": "String",
+            "kategori_id": "integer",
+            "createdAt": "String",
+            "updatedAt": "String",
+            "kategori": {
+                "id": "integer",
+                "nama": "String",
+                "deskripsi": "String",
+                "createdAt": "String",
+                "updatedAt": "String"
+            }
+        }
+  }
+  ```
+  - hasil gambar
+    
+ ![image](https://github.com/mr-exploit/tugas-TPA-5/assets/65493711/bf9ee797-79d4-43c1-9697-fc98a22a73a3)
+
+
+
   
   
