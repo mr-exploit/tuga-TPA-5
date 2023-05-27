@@ -5,15 +5,15 @@ const { auth } = require('../middleware/middleware');
 const app = express();
 
 
-const gettodoall = app.get("/todo", auth, handletodogetall);
+const gettodoall = app.get("/todo",  handletodogetall);
 
-const gettodoid = app.get("/todo/:id", auth, handletodogetid);
+const gettodoid = app.get("/todo/:id",  handletodogetid);
 
-const createtodo = app.post("/todo", handletodocreate);
+const createtodo = app.post("/todo", auth, handletodocreate);
 
-const updatetodo = app.put("/todo/:id", handletodoupdate);
+const updatetodo = app.put("/todo/:id", auth, handletodoupdate);
 
-const deletetodo = app.delete("/todo/:id", handletododelete);
+const deletetodo = app.delete("/todo/:id", auth, handletododelete);
 
 
 module.exports = {

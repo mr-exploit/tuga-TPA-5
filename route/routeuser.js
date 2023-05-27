@@ -8,13 +8,13 @@ const get = app.get("/", (req, res) => {
     res.send("hallo anda berhasil menggunakan endpoint ini");
 });
 
-const getusersall = app.get("/users",  handleuserall);
+const getusersall = app.get("/users", auth,handleuserall);
 
 
 
 const getusersid = app.get("/users/:id", auth, handleuserid);
 
-const createusers = app.post("/users", handlecreate);
+const createusers = app.post("/singup", handlecreate);
 
 const updateusers = app.put("/users/:id", auth, handleupdate);
 
