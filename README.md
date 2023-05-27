@@ -9,9 +9,19 @@ hasilnya akan seperti gambar dibawah
 
 selanjutnya untuk mengetes API silahkan dicoba 
 
-# authentication
+## Authorization
+ada beberapa API yang minta authorization :
+1. getUserall
+2. getUserid
+3. updateusers
+4. deleteusers
+5. gettodoall
 
-# LOGIN
+Request :
+- Header :
+    - "Authorization" : "your secret api key"
+
+## LOGIN
 
 Request :
 
